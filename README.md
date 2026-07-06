@@ -6,7 +6,7 @@
 
 ## terminal
 
-![terminal view](assets/2026-07-06_16-04-52.png)
+![terminal view](assets/2026-07-06_17-11-17.png)
 
 ## neovim
 
