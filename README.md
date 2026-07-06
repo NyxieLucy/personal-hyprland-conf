@@ -10,4 +10,4 @@
 
 ## neovim
 
-![neovim aesthetic](assets/2026-07-06_16-04-52.png)
+![neovim aesthetic](assets/2026-07-06_16-07-16.png)
