@@ -1,0 +1,154 @@
+/*this one should be at: ~/.config/waybar/style.css 
+/* you'll have to have the font-family installed */
+* {
+    font-family: "JetBrains Mono", "Iosevka", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #e0e0e0;
+}
+
+/* Three pill-shaped glass segments */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(12, 12, 12, 0.65);
+    border: 1px solid rgba(255, 107, 53, 0.18);
+    padding: 6px 14px;
+    border-radius: 16px;
+    margin: 0 4px;
+}
+
+/* Power icon */
+#custom-power {
+    color: #ff6b35;
+    font-size: 14px;
+    padding-right: 8px;
+    margin-right: 6px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Workspaces  rounded pills too */
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: #555555;
+    background: transparent;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #ff9f68;
+    background: rgba(255, 107, 53, 0.12);
+}
+
+#workspaces button.active {
+    color: #ff6b35;
+    background: rgba(255, 107, 53, 0.15);
+}
+
+#workspaces button.urgent {
+    color: #ff3333;
+    background: rgba(255, 51, 51, 0.12);
+}
+
+/* Window title (i recommend making this one lighter honestly) */
+#window {
+    color: #888888;
+    padding-left: 12px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#window.empty {
+    color: transparent;
+}
+
+/* Clock */
+#clock {
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* System stats */
+#cpu, #memory, #battery, #network, #pulseaudio {
+    padding: 0 10px;
+    color: #cccccc;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#battery.critical {
+    color: #ff3333;
+    animation: blink 1s infinite;
+}
+
+#battery.warning {
+    color: #ff9f68;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+#network.disconnected {
+    color: #555555;
+}
+
+#pulseaudio.muted {
+    color: #555555;
+}
+
+/* Separator */
+#custom-sep {
+    color: rgba(255, 255, 255, 0.06);
+    padding: 0 4px;
+    font-weight: 300;
+}
+
+/* Tray */
+#tray {
+    padding-right: 8px;
+    margin-right: 4px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#tray > .needs-attention {
+    background-color: rgba(255, 107, 53, 0.2);
+    border-radius: 8px;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: rgba(12, 12, 12, 0.85);
+    border: 1px solid rgba(255, 107, 53, 0.25);
+    border-radius: 12px;
+    color: #e0e0e0;
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* Hover accents */
+#network:hover,
+#pulseaudio:hover,
+#clock:hover {
+    color: #ff9f68;
+    transition: color 0.2s ease;
+}

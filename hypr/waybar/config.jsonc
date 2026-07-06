@@ -1,0 +1,109 @@
+// heads up this one shall be at: ~/.config/waybar/config.jsonc
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 6,
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "network",
+    "cpu",
+    "memory",
+    "battery",
+    "custom/sep",
+    "pulseaudio"
+  ],
+  "custom/power": {
+    "format": "    ",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": false
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 40,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹  $1",
+      "(.*) - fish": "󰈺  $1",
+      "(.*) - nvim": "󰈮  $1"
+    }
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d %b %Y}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 2,
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {}%",
+    "interval": 2,
+    "tooltip": false
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "network": {
+    "format-wifi": "󰤨  {essid}",
+    "format-ethernet": "󰈀  wired",
+    "format-disconnected": "󰤭  offline",
+    "tooltip-format": "{ipaddr}",
+    "on-click": "kitty nmtui"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰖁  muted",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+  "custom/sep": {
+    "format": "│",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  }
+}
